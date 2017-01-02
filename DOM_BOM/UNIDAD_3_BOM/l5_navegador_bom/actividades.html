@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body onload="nav();">
+
+		<h2> Navegador del BOM</h2>
+		<p id="mensaje"></p>
+		<script>
+			function nav(){
+				var mensaje = "";
+
+				mensaje += "CookieEnabled: " + navigator.cookieEnabled + "<br>";
+				mensaje += "plataform: " + navigator.platform + "<br>";
+				mensaje += "Product: " + navigator.product + "<br>";
+				mensaje += "Tipo Mime: " + "<br>";
+
+				mensaje += "appName: "+ navigator.appName + "<br>";
+				mensaje += "appCodeName: "+ navigator.appCodeName + "<br>";
+				mensaje += "appVersion: " + navigator.appVersion + "<br>";
+				mensaje += "language :" + navigator.language + "<br>";
+	
+				mensaje += "onLine: " + navigator.onLine + "<br>";
+				mensaje += "javaEnabled(): " + navigator.javaEnabled() + "<br>";
+				mensaje += "userAgent: " + navigator.userAgent + "<br>";
+
+
+				for(i=0;i<navigator.mimeTypes.length;i++){
+					mensaje+="-"+navigator.mimeTypes[i].type+"<br>";
+				}
+
+				mensaje += "plugins: <br>";
+				
+				for(j=0;j<navigator.plugins.length;j++){
+					mensaje+="-"+ navigator.plugins[j].name;
+				}
+				
+				document.getElementById("mensaje").innerHTML = mensaje;
+			}
+		</script>
+
+	</body>
+</html>

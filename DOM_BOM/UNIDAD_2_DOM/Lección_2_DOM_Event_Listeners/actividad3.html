@@ -1,0 +1,24 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<input id="miInput" value="">
+
+		<script>
+			document.getElementById("miInput").addEventListener("click",cambiar1);
+			document.getElementById("miInput").addEventListener("blur",cambiar2);
+
+			function cambiar1(){
+				document.getElementById("miInput").style.width="150px";
+				document.getElementById("miInput").style.height="50px";
+			}
+			function cambiar2(){
+				document.getElementById("miInput").style.color="orange";
+				document.getElementById("miInput").style.backgroundColor="blue";
+			}
+			
+		</script>
+	</body>
+	</html>

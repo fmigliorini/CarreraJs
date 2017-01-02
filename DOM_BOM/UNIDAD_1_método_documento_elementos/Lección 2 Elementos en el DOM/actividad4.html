@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Producto</td>
+			<td>Precio</td>
+			<td>Cantidad</td>
+			<td>Subtotal</td>
+		</tr>
+		<tr>
+			<td>Camisa</td>
+			<td><input type="text" id="precioCamisa" value="30000" disabled></td>
+			<td><input type="text" id="cantidadCamisa" value=""></td>
+			<td id="subTotalCamisa"></td>
+		</tr>
+		<tr>
+			<td>Gorra</td>
+			<td><input type="text" id="precioGorra" value="50000" disabled></td>
+			<td><input type="text" id="cantidadGorra" value=""></td>
+			<td id="subTotalGorra"></td>
+		</tr>
+		<tr>
+			<td>Zapatos</td>
+			<td><input type="text" id="precioZapatos" value="60000" disabled></td>
+			<td><input type="text" id="cantidadZapatos" value=""></td>
+			<td id="subTotalZapatos"></td>
+		</tr>
+		<tr>
+			<td>Pantalón</td>
+			<td><input type="text" id="precioPantalon" value="80000" disabled></td>
+			<td><input type="text" id="cantidadPantalon" value=""></td>
+			<td id="subTotalPantalon"></td>
+		</tr>
+		<p>Compra total <input type="text" id="totalCompra"></p>
+		<button onclick="subTotal();">Calcular Sub Total</button>
+		<button onclick="calcularTotal();">Calcular Total</button>
+	</table>
+		
+	<script>
+				
+		
+		function subTotal(){
+			 valorCamisa = calcularSubTotal("Camisa");
+			 mostrarSubTotal("Camisa",valorCamisa);
+			 valorGorra = calcularSubTotal("Gorra");
+			 mostrarSubTotal("Gorra",valorGorra);
+			 valorZapatos = calcularSubTotal("Zapatos");
+			 mostrarSubTotal("Zapatos",valorZapatos);
+			 valorPantalon = calcularSubTotal("Pantalon");
+			 mostrarSubTotal("Pantalon",valorPantalon);
+		}	
+
+		function calcularSubTotal(obj){
+			var precio = document.getElementById("precio"+obj).value;
+			var cantidad = document.getElementById("cantidad"+obj).value;
+			return precio*cantidad;
+		}
+
+		function mostrarSubTotal(obj,precio){
+			document.getElementById("subTotal"+obj).innerHTML = precio;
+		}
+
+		function calcularTotal(){
+			valorCamisa = calcularSubTotal("Camisa");
+			valorGorrra = calcularSubTotal("Gorra");
+			valorZapatos = calcularSubTotal("Zapatos");
+			valorPantalon = calcularSubTotal("Pantalon");
+			total = valorCamisa+valorGorrra+valorZapatos+valorPantalon;
+			document.getElementById('totalCompra').value=total;
+
+		}
+
+	</script>
+</body>
+</html>

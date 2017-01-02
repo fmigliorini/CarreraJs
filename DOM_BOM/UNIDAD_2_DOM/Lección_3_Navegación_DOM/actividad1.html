@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="texto1">Primer Texto</h1>
+	<p id="texto2">Segundo Texto</p>
+
+	<div id="cont"><h1 id="h1"> Elementos </h1><p id="p">Nombre</p><input id="input" type="text"><button id="btn"> aceptar </button><div>
+	
+
+	<button id="btn-elementos">mostrar elementos</button>
+	<button id="btn-primer-elemento">primer elemento</button>
+	<button id="btn-ultimo-elemento">primer elemento</button>
+
+	<p id="mensaje"></p>
+	<script>
+		var cambiarTexto1 = document.getElementById("texto1").childNodes[0].nodeValue;
+		document.getElementById("texto2").innerHTML = cambiarTexto1;
+
+		document.getElementById("btn-elementos").addEventListener("click",function(){
+			var elementos = document.getElementsByTagName("div")[0];
+			var texto = "";
+			for(i=0;i<elementos.childNodes.length;i++){
+				texto += elementos.childNodes[i].nodeName+"</br>";
+			}
+			document.getElementById("mensaje").innerHTML = texto;
+		});
+
+		document.getElementById("btn-primer-elemento").addEventListener("click",function(){
+			var primerElemento=document.getElementById("cont").firstChild.nodeName;
+			document.getElementById("mensaje").innerHTML = primerElemento;
+		});
+		document.getElementById("btn-ultimo-elemento").addEventListener("click",function(){
+			var ultimoElemento = document.getElementById("cont").lastChild.nodeName;
+			document.getElementById("mensaje").innerHTML = ultimoElemento;
+		});
+	</script>
+</body>
+</html>

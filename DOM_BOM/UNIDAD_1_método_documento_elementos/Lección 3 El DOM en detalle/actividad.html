@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id="contenido">
+			<h1 id="title">Registro de Estudiantes</h1>
+			<p id="mensaje"></p>
+			<form>
+				Nombre: <input type="text" id="" \> <br/>
+				Apellido:  <input type="text" id="" \> <br/>
+				Dirección:  <input type="text" id="" \> <br/>
+				Edad:  <input type="text" id="" \> <br/>
+				Fecha de Nacimiento:  <input type="date" id="" \> <br/>
+				Lugar de Nacimiento: 	 <input type="text" id="" \> <br/>
+				Estado Civil:  <input type="text" id="" \>	<br/>
+			</form>
+			<button onclick="registrarAlumno();" >Registrar Alumno</button>
+			<button onclick="cambiarTitulo();" >Cabiar Titulo</button>
+			<button onclick="cambiarColor();" >Cambiar Color</button>
+		</div>
+	</body>
+	<script>
+		function registrarAlumno(){
+			var mensaje = document.getElementById("mensaje");
+			var res = document.createTextNode("Alumno Registrado");
+			mensaje.appendChild(res);
+		}
+
+		function cambiarTitulo(){
+			document.getElementById("title").innerHTML="Registro de Docente";
+		}
+		
+		function cambiarColor(){
+			var input = document.getElementsByTagName("input");
+			for(i=0;i<input.length;i++){
+				input[i].style.color="red";
+			}
+		}
+
+	</script>
+</html>

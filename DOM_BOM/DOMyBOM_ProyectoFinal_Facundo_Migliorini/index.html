@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+				<h1 class="titulo"> Examen DOM y el BOM</h1>
+				<form class="form">
+					<h2>Formulario Estudiante</h2>
+					<div class="form-control">
+						<label>Código: </label>
+						<input type="text" id="codigo" placeholder="Código">
+					</div>
+					<div class="form-control">
+						<label>Nombre: </label>
+						<input type="text" id="nombre" placeholder="Nombre">
+					</div>
+					<div class="form-control">
+						<label>Nota: </label>
+						<input type="text" id="nota" placeholder="nota"> 
+					</div>
+				</form>
+			<div class="contenedor">
+				<div class="columna">
+					<button class="btn" id="registrarEstudiante">Registrar Estudiante</button>
+				</div>
+				<div class="columna">
+					<button class="btn" id="calcularPromedio">Calcular la nota promedio</button>
+					<!-- LA INFO SE MOSTRARA EN ALERTS <p id="promedio"></p> -->
+				</div>
+				<div class="columna">
+					<button class="btn" id="notaMayor">Estudiante con mayor nota</button>
+					<!-- LA INFO SE MOSTRARA EN ALERTS <p id="mayor"></p> -->
+				</div>
+				<div class="columna">
+					<button class="btn" id="notaMenor">Estudiante con menor nota</button>
+					<!-- LA INFO SE MOSTRARA EN ALERTS <p id="menor"></p> -->
+				</div>
+				<div class="contTabla">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Nota</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+				</div>
+			</div>
+
+		<!-- 
+			El script lo cargo al final del archivo para que la carga de la web sea mas dinamica
+		-->
+		<script type="text/javascript" src="js/function.js"></script>
+	</body>
+</html>

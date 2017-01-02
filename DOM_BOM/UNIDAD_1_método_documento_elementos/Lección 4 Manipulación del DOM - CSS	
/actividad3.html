@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table border="1" align="center">
+			<tr id="title">
+				<td>Jugadores</td>
+				<td>Goles</td>
+			</tr>
+			<tr name="data">
+				<td>James Rodriguez</td>
+				<td>6</td>
+			</tr>
+			<tr name="data">
+				<td>Thomas Mueller</td>
+				<td>5</td>
+			</tr>
+			<tr name="data" >
+				<td>Neymar</td>
+				<td>4</td>
+			</tr>
+			<tr name="data"> 
+				<td>Lionel Messi</td>
+				<td>3</td>
+			</tr>
+		</table>
+		<button onclick="cambiar();">Cambiar</button>
+	</body>
+	<script>
+		function cambiar(){
+			document.getElementById("title").style.backgroundColor="red";
+			var data = document.getElementsByName("data");
+			for(i=0;i<data.length;i++){
+				data[i].style.backgroundColor="blue";
+				data[i].style.fontFamily="italic";
+				data[i].style.fontWeight="bold";
+			}
+		}
+	</script>
+</html>

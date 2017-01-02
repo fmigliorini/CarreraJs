@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h2>cookie</h2>	
+		<button onclick="agregar();">Agregar Cookie</button>
+		<button onclick="obtener();">Obtener Cookie</button>
+		<button onclick="borrar();">Borrar Cookie</button>
+		<script>
+			function agregar(){
+				document.cookie="Universidad=Home;Expires 10:57:00; path=/";
+			}
+			function obtener(){
+				var cookie = document.cookie;
+				alert(cookie);
+			}
+			function borrar(){
+				document.cookie="Universidad=;Expires 10:57:00; path=/";
+			}
+		</script>
+	</body>
+</html>

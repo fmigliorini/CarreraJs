@@ -1,0 +1,32 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<button onclick="abrirVentana();">Abrir Ventana</button>
+		<button onclick="dimensionVentana();">Redimencionar ventana</button>
+		<button onclick="info();">info</button>
+		<button onclick="close();">close</button>
+		<script>
+			function abrirVentana(){
+				ventana=window.open("","_blank","height=300px, width=300px");
+				ventana.focus();
+			}
+			function dimensionVentana(){
+				ventana.resizeTo(500,400);
+			}
+			function info(){
+				html="";
+				html+="aheight" + ventana.screen.availHeight;
+				html+="\n awidth" + ventana.screen.availWidth;
+				html+="\n height" + ventana.screen.height;
+				html+="\n width" + ventana.screen.width;
+				html+="\n colorDepth" + ventana.screen.colorDepth;
+
+				ventana.document.write(html);
+			}
+			function close(){
+				ventana.close();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="mensaje1"></h1>
+<h2 id="mensaje2"></h2>
+<h3 id="mensaje3"></h2>
+<h4 id="mensaje4"></h2>
+<h1 id="mensaje5"></h2>
+</body>
+<script>
+	texto1 = document.getElementById("mensaje1");
+	texto2 = document.getElementById("mensaje2");
+	texto3 = document.getElementById("mensaje3");
+	texto4 = document.getElementById("mensaje4");
+	texto5 = document.getElementById("mensaje5");
+
+	texto1.innerHTML = "NEXT UNIVERSITY";
+	texto2.innerHTML = "Programa de certificación de JavaScript";
+	texto3.innerHTML = "Profesor: Gustavo De La Vega";
+	texto4.innerHTML = "Demo: Manipulación completa del DOM";
+	texto5.innerHTML = "Continuemost";
+
+	texto1.style.color="green";
+	texto2.style.color="red";
+	texto3.style.color="orange";
+	texto4.style.color="cyan";
+	texto5.style.color="blue";
+
+	var text6 = document.createElement("h1");
+	contenidoText6 = document.createTextNode("Nuevo encabezado");
+	text6.appendChild(contenidoText6);
+	
+	document.body.appendChild(text6);
+	text6.style.backgroundColor="black";
+	text6.style.color="purple";
+</script>
+</html>
+
+
+
+

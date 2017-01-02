@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="miDiv">Mi Div!!!</div>
+	<script>
+		
+		document.getElementById("miDiv").addEventListener("click",cambiarDiv);
+		function cambiarDiv(){
+			var div = document.getElementById("miDiv");	
+			div.style.width="400px";
+			div.style.height="400px";
+			div.style.backgroundColor="green";
+			div.style.fontSize="xx-large";
+		}
+
+	</script>
+</body>
+</html>
