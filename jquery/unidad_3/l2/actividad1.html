@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta charset="uf-8">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<style>
+		#test{
+			width:100px;
+			height:100px;
+			background-color:blue;
+		}
+	</style>
+	<body>
+		<h1> QUEUE</h1>
+
+		<div id="test">
+		</div>
+		<button id="btn">START</button>
+		<button id="btn-stop">STOP</button>
+		<script>
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					colaEfectos();
+				});
+				$("#btn-stop").click(function(){
+				
+				});
+
+				function colaEfectos(){
+					var div = $("#test");
+
+					div.queue(function(){
+						$(this).css({
+							"background-color":"red",
+						});
+						$(this).dequeue();
+					});
+					div.hide(1000);
+					div.show(2000);
+					div.fadeIn(3000);
+					div.fadeOut(3000);
+					div.show(1000);
+				}
+			});
+		</script>
+	</body>
+</html>

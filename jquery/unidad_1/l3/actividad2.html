@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body>
+
+
+		<script type="text/javascript">
+
+			var producto = (function(){
+				
+				var codigo = "001";
+				var nombre = "Camisa Roja";
+				var precio = 35000;
+				var cantidad = 8;
+
+				mostrarCodigo = function(){
+					console.log(codigo);
+				};
+
+				mostrarNombre = function(){
+					console.log(nombre);
+				};
+
+				mostrarPrecio = function(){
+					console.log(precio);
+				};
+
+				mostrarTotal = function(){
+					console.log(cantidad*precio);
+				};
+
+				return{
+					mostrarCodigo : mostrarCodigo,
+					mostrarNombre : mostrarNombre,
+					mostrarPrecio : mostrarPrecio,
+					mostrarTotal : mostrarTotal
+				};
+
+			})();
+		
+			producto.mostrarCodigo();
+			producto.mostrarNombre();
+			producto.mostrarPrecio();
+			producto.mostrarTotal();
+
+		</script>
+	</body>
+</html>

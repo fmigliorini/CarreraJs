@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>Datos de un Empleado</h1>
+		<div>
+			<label>Código</label>
+			<input type="text" id="codigo">
+		</div>
+		<div>
+			<label>Nombre</label>
+			<input type="text" id="nombre">
+		</div>
+		<div>
+			<label>Dirección</label>
+			<input type="text" id="direccion">
+		</div>
+		<div>
+			<label>Teléfono</label>
+			<input type="text" id="telefono">
+		</div>
+		<div>
+			<label>E-mail</label>
+			<input type="text" id="email">
+		</div>
+
+		<input type="submit" value="Registrar Empleado" onclick="registrarEmpleado();">
+		<input type="submit" value="Mostrar Empleado" onclick="mostrarEmpleado()">
+		
+		<div>
+			<p id="data"></p>
+		</div>	
+		<script type="text/javascript">
+			$(document).ready(){		
+				
+				var empleado = {
+					codigo:null,
+					nombre:null,
+					direccion:null,
+					telefono:null,
+					email:null,
+
+					init: function(config){
+						empleado.config = config;
+					},
+				
+					leerPropiedades: function(){
+						return empleado.config;
+					}
+				}
+
+				function registrarEmpleado(){
+					var codigo = $('#codigo').val();
+					var nombre = $('#nombre').val();
+					var direccion = $('#direccion').val();
+					var telefono = $('#telefono').val();
+					var email = $('#email').val();
+
+					var propiedadesEmpleado = {
+						"codigo" : codigo,
+						"nombre" : nombre,
+						"direccion" : direccion,
+						"telefono" : telefono,
+						"email" : email
+					}
+				
+					empleado.init(propiedadesEmpleado);
+					alert("EMPLEADO REGISTRADO");
+			
+				}
+			
+				function mostrarEmpleado(){
+					var propiedades = empleado.leerPropiedades();
+						
+					var info ="Codigo : " + propiedades.codigo + 
+										" <br> Nombre : " + propiedades.nombre +
+										" <br> Direccion : " + propiedades.direccion +
+										" <br> telefono : " + propiedades.telefono +
+										" <br> email : " + propiedades.email; 
+
+					$('#data').html(info);
+				}
+
+			};	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta charset="uf-8">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<style>
+		#test{
+			width:100px;
+			height:100px;
+			background-color:blue;
+		}
+	</style>
+	<body>
+		<h1> ANIMATE </h1>
+
+		<div id="test">
+		</div>
+		<button id="btn">START</button>
+		<button id="btn-stop">STOP</button>
+		<script>
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					$("#test").animate({width:"2000px"},3000);
+				});
+				$("#btn-stop").click(function(){
+					$("#test").stop();
+				});
+			});
+		</script>
+	</body>
+</html>

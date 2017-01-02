@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- JS -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	</head>
+	<style>
+		.error{
+			color:red;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h2 class="text-center">PRUEBA JQUERY PLUGIN</h2>
+				<form id="form">
+					<h3>Generar Usuario</h3>
+				  <div class="form-group">
+				    <label for="email">Email address</label>
+				    <input type="email" class="form-control" id="email" placeholder="Email" required="required" >
+				  </div>
+				  <div class="form-group">
+				    <label for="pas">Password</label>
+				    <input type="text" class="form-control" id="pas" placeholder="Password" required>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Guardar</button>
+				</form>
+			</div>
+		</div>
+		<script>
+			$().ready(function(){
+		    $.validator.setDefaults({
+	        submitHandler: function() {
+            alert("Incio sesión exitoso!");
+	        }
+		    });
+
+				var validator = $("#form").validate({
+					
+					errorPlacement: function(error, element){
+						$(element)
+							.closest("form")
+							.find("label[for='" + element.attr("id") + "']")
+							.append(error);
+					},
+
+					errorElement: "span",
+
+					messages: {
+            email: {
+              required: " (Por Favor ingrese su Nombre de Usuario)",
+              minlength: " (De tener minimo 3 caracteres)"
+            },
+            password: {
+              required: " (Por Favor Ingrese su Contraseña)",
+              minlength: " (Debe tener entre 5 y 12 caracteres)",
+              maxlength: " (Debe tener entre 5 y 12 caracteres)"
+            }
+            ,
+            edad: {
+              required: " (Por Favor ingrese su edad)"
+            }
+            ,
+            lugar: {
+              required: " (Por Favor ingrese su Lugar de Nacimiento)"
+            }
+          }
+				});
+
+			});
+		</script>
+	</body>
+</html>

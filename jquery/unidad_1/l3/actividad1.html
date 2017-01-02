@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body>
+
+
+		<script type="text/javascript">
+			var estudiante = {
+				
+				id : null,
+				nombre : null,
+				edad : null,
+
+				init: function(config){
+					estudiante.config = config;
+				},
+
+				mostrarId: function(){
+					console.log(estudiante.config.id);
+				},
+
+				mostrarNombre: function(){
+					console.log(estudiante.config.nombre);
+				},
+
+				mostrarEdad: function(){
+					console.log(estudiante.config.edad);
+				}
+			};
+
+			var config = {
+				id:"01",
+				nombre:"Facundo Migliorini",
+				edad:"25"
+			}
+
+			estudiante.init(config);
+			
+			estudiante.mostrarId();
+			estudiante.mostrarNombre();
+			estudiante.mostrarEdad();
+		</script>
+	</body>
+</html>
