@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="carApp">
+	<head>
+		<title>Car App</title>
+		<!-- META -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- ICON -->
+		<link rel="icon" href="../../favicon.ico">
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap-blog.css">
+		<link type="text/css" rel="stylesheet" href="css/jumbotron-narrow.css">
+		<!-- JS -->
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.js"></script>
+		<script type="text/javascript" src="js/angular-resource.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+		<script type="text/javascript" src="js/services.js"></script>
+	</head>
+	<body ng-controller="CarListCtrl">
+		<div class="blog-masthead">
+			<div class="container">
+				<nav class="blog-nav">
+					<a class="blog-nav-item active" href="">CarApp</a>
+				</nav>
+			</div>
+		</div>	
+		<div ng-view class="container"></div>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="cookieApp">
+<head>
+	<title>Angular Js Servicios</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div ng-controller="MainController">
+		<label> Dime algo y lo recordare </label>
+		<input ng-model="value">
+		<button ng-click="saveCookie(value);">Recordar</button>
+		<h2>Lo ultimo que me dijiste fue: {{ getCookie() }}</h2>
+	</div>
+
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+</body>
+</html>

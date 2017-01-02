@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html lang="en" ng-app="smartExperssionApp">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="">
+		<meta name="description" content="">
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+
+	</head>
+	<body>
+		<div ng-controller="EvalController">
+			<h1>Evaluador de Expresiones</h1>
+			<form>
+				<label>Digite la expresión que desee evaluar: </label><input type="text" ng-model="expression">
+				<button ng-click="evaluate()">Evaluar</button>
+			</form>
+			<hr>
+			<ul>
+				<li ng-repeat="expression in expressions">
+					<button ng-click='deleteExp($index)'>Eliminar</button>
+					{{ expression.value }} => <span ng-bind="$parent.$eval(expression.value)"> </span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
