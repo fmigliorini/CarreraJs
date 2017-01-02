@@ -1,29 +1,29 @@
 {
 	"manofacter": {
 		"name": "NISSAN",
-		"country" : "Japan",
+		"country": "Japan"
 	},
 	"engine": {
-		"gears" : "6",
-		"transmission" : "Manual",
-		"type" : "Diesel"
+		"gears": "6",
+		"transmission": "Manual",
+		"type": "Diesel"
 	},
-	"description":"The Navara is all about freedom including freedom of choice.",
+	"description": "The Navara is all about freedom including freedom of choice.",
 	"id": "new-qashqai",
 	"images": [
-		"img/cars/nissan_navara.jpg",
-		"img/cars/nissan_navara.jpg",
+		"img/cars/bmw1.jpg",
+		"img/cars/bmw2.jpg"
 	],
-	"name":"New Qashqai",
-	"sizeAndWeight":{
+	"name": "New Qashqai",
+	"sizeAndWeight": {
 		"dimensions": [
 			"1783.9 mn (w)",
 			"1595.8 mn (h)",
 			"5222.4 mn (l)"
 		],
-		"weigth" : "3110.0 kg"
+		"weigth": "3110.0 kg"
 	},
-	"space":{
-		"volumen" : "1130l"
+	"space": {
+		"volumen": "1130l"
 	}
 }
