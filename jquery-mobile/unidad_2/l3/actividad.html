@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Damas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<script src="js/jquery-2.2.4.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/function.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="paginaInicio">
+			<div data-role="header">
+				<h1>Gestión Personas</h1>
+			</div>
+			<div data-role="content">
+				<a id="btnRegistroPersona" class="ui-btn"> Registro Personas </a>
+				<a id="btnListarPersona" class="ui-btn"> Lista Personas </a>
+			</div>
+			<div data-role="footer">
+				<p align="center">Gestión Personas</p>
+			</div>
+		</div>
+		<div data-role="page" id="registroPersona">
+			<div data-role="header">
+				<h1> Registro Persona </h1>
+			</div>
+			<div data-role="content">
+				<form>
+					<div class="ui-field-contain">
+						<label for="id">ID</label>
+						<input type="text" name="id" id="id">
+						<label for="nombre">Nombre</label>
+						<input type="text" id="nombre" name="nombre" >
+						<label for="edad">Edad</label>
+						<input type="text" id="edad" name="edad">
+					</div>
+					<fieldset data-role="controlgroup">
+						<leyend>Genero</leyend>
+						<input type="radio" name="radio-genero" id="radio-genero-1" value="M" checked="checked">
+						<label for="radio-genero-1">Masculino</label>
+						<input type="radio" name="radio-genero" id="radio-genero-2" value="F">
+						<label for="radio-genero-2">Femenino</label>
+					</fieldset>
+					<a id="btnGuardarPersona" class="ui-btn"> Registrar Persona </a>
+					<a class="ui-btn volver">Volver</a>
+				</form>
+			</div>
+			<div data-role="footer">
+			</div>
+		</div>
+
+		<div data-role="page" id="listaPersona">
+			<div data-role="header">
+				<h1> Listado Persona </h1>
+			</div>
+			<div data-role="content">
+				<div id="listaHombres" data-role="collapsible">
+					<h3>Hombres</h3>
+					<table id="tablaHombres" style="width:100%;" border="1">
+						<tr>
+							<th>id</th>
+							<th>Nombre</th>
+							<th>Edad</th>
+						</tr>
+					</table>
+				</div>
+				<div id="listaMujeres" data-role="collapsible">	
+					<h3>Mujeres</h3>
+					<table id="tablaMujeres" style="width:100%;" border="1">
+						<tr>
+							<th>id</th>
+							<th>Nombre</th>
+							<th>Edad</th>
+						</tr>
+					</table>
+				</div>
+				<a class="ui-btn volver">Volver</a>
+			</div>
+			<div data-role="footer">
+			</div>
+		</div>
+	</body>
+</html>

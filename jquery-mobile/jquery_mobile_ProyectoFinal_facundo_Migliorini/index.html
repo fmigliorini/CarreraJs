@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale=1">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- JS -->
+		<script src="js/jquery-1.12.4.js"></script>	
+		<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAPLQQj3LwIpBv26jqo0t_35HjUdyyUl0c"></script>
+
+		<script src="js/function.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="inicio">
+			<div data-role="header">
+				<h1> Gestión Hotel </h1>
+			</div>
+			<div data-role="content">
+				<a class="ui-btn" href="#" id="btnRegistroHotel"> Registrar Hotel </a>
+				<a class="ui-btn" href="#" id="btnListarHoteles"> Lista Hoteles </a>
+			</div>
+			<div data-role="footer">
+				<p align="center">Gestión Hotel</p>
+			</div>
+		</div>
+
+
+
+		<div data-role="page" id="paginaRegistroHotel">
+			<div data-role="header">
+				<h1> Registro Hotel </h1>
+			</div>
+			<div data-role="content">
+				<form>
+					<div class="ui-field-contain">
+						<label for="nombre">Nombre</label>
+						<input type="text" name="nombre" id="nombre">
+					</div>
+					<div class="ui-field-contain" id="mapaRegistro">
+					</div>
+					<div class="ui-field-contain">
+						<label for="ciudad">Ciudad</label>
+						<input type="text" name="ciudad" id="ciudad">
+					</div>
+					<div class="ui-field-contain">
+						<label for="telefono">Teléfono</label>
+						<input type="text" name="telefono" id="telefono">
+					</div>
+					<div class="ui-field-contain">
+						<label for="estrellas">Estrellas</label>
+						<input type="text" name="estrellas" id="estrellas">
+					</div>
+				</form>
+				<a class="ui-btn" id="registrarHotel">Registrar Hotel</a>
+				<a class="ui-btn volver">Volver</a>
+			</div>
+		</div>
+
+
+
+		<div data-role="page" id="listarHoteles">
+			<div data-role="header">
+				<h1> Lista Hoteles </h1>
+			</div>
+			<div data-role="content">
+				<!-- FUCKING LISTA -->
+				<ul data-role="listview" id="listaHoteles"  data-inset="true"></ul>
+				<a class="ui-btn volver">Volver</a>
+			</div>
+		</div>
+
+
+		<div data-role="page" id="verHotel">
+			<div data-role="header">
+				<h1> Datos Hotel </h1>
+			</div>
+			<div data-role="content">
+				<div id="mensaje"></div>
+				<p><strong>Ubicación</strong></p>
+				<div id="mapaVerHotel"></div>
+				<a href="#" class="	" id="btnListaHoteles">Lista Hoteles</a>
+			</div>
+	</body>
+</html>
