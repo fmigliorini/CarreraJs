@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="text"></p>
+	</body>
+	<script>
+		
+		var text = "";
+		var arreglo = ['Milan','Liverpool','Barcelona','Chelsea','Bayern'];
+		var contador = 0;
+		do{
+			text+=arreglo[contador]+"<br>";
+			contador++;
+		}while(contador<arreglo.length)
+		document.getElementById("text").innerHTML = text		;
+	</script>
+</html>

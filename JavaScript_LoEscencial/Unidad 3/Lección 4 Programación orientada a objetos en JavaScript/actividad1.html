@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="miFuncion()">button</button>
+		<p id="mostrar"></p>
+	</body>
+	<script>
+		function Producto(codigo,nombre,cantidad,precio){
+			this.codigo=codigo;
+			this.nombre=nombre;
+			this.cantidad=cantidad;
+			this.precio=precio;
+
+			this.mostrar = function(){
+					document.getElementById("mostrar").innerHTML = this.codigo+this.nombre+this.cantidad+this.precio;
+			}
+		}
+		
+		function miFuncion(){
+			var pro = new Producto('0001','azucar','12','10,00');
+			pro.mostrar();
+		}
+
+	</script>
+</html>

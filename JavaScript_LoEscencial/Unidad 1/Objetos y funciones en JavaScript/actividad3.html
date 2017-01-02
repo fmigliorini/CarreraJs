@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Actividad 3 objetos</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Persona 1</h1>
+
+		<p id="p1id"></p>
+		<p id="p1nombre"></p>
+		<p id="p1edad"></p>
+
+		<h1>Persona 2</h1>
+
+		<p id="p2id"></p>
+		<p id="p2nombre"></p>
+		<p id="p2edad"></p>
+		
+		<h1>Persona 3</h1>
+
+		<p id="p3id"></p>
+		<p id="p3nombre"></p>
+		<p id="p3edad"></p>
+		
+	</body>
+
+	<script>
+	var persona1 = {
+		id:"001",
+		nombre:"charls",
+		edad:10
+	}
+
+	document.getElementById("p1id").innerHTML = persona1.id;
+	document.getElementById("p1nombre").innerHTML = persona1.nombre;
+	document.getElementById("p1edad").innerHTML = persona1.edad;
+
+	var persona2 = new Object();
+	persona2.codigo = "002";
+	persona2.nombre = "max";
+	persona2.edad = 15;
+
+	document.getElementById("p2id").innerHTML = persona2.id;
+	document.getElementById("p2nombre").innerHTML = persona2.nombre;
+	document.getElementById("p2edad").innerHTML = persona2.edad;
+
+	function persona3(id,nombre,edad){
+		this.id=id;
+		this.nombre=nombre;
+		this.edad=edad;
+	}
+
+	var persona3 = new persona3("003","mike",20);
+
+	document.getElementById("p3id").innerHTML = persona3.id;
+	document.getElementById("p3nombre").innerHTML = persona3.nombre;
+	document.getElementById("p3edad").innerHTML = persona3.edad;
+
+	</script>
+</html>

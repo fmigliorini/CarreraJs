@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h1>Comentarios de una linea</h1>
+
+    <p id="var1"></p>
+
+    <p id="var2"></p>
+
+    <p id="var3"></p>
+
+    <p id="var4"></p>
+
+    <p id="var5"></p>
+
+    <p id="resultado"></p>
+
+  <script>
+      
+      //declaro la variable a
+      var a = 50;
+      // Muestro a en el id var1
+      document.getElementById("var1").innerHTML=a;
+
+      //declaro la variable B
+      var b = 43 * 3;
+      // Muestro b en el id var2
+      document.getElementById("var2").innerHTML=b; 
+
+      //declaro la variable C
+      var c = (32/2)*4;
+      // Muestro c en el id var3
+      document.getElementById("var3").innerHTML=c;
+
+      var d = "Hola como esta?"; 
+      // Muestro d en el id var4
+      document.getElementById("var4").innerHTML=d;
+
+      var e = "Next University"; 
+      // Muestro e en el id var5
+      document.getElementById("var5").innerHTML=e;
+      
+      /*  
+        funcion que al ser llamada 
+        resta 2 numeros
+      */
+      function resta() {
+
+          return 4 - 10;
+
+      }
+      // Llamo a la funcion resta y guardo el resultado en la variable "resuktadi"
+      var resultado=resta(); 
+      // Muestro resultado en el id resultado
+      document.getElementById("resultado").innerHTML=resultado;
+
+  </script>
+  
+</body>
+
+</html> 

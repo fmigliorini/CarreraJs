@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Actividad 4 Objetos.</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		
+		<h1>Vehiculo 1</h1>
+		<p id="v1placa"></p>
+		<p id="v1marca"></p>
+		<p id="v1modelo"></p>
+
+		<h1>Vehiculo 2</h1>
+		<p id="v2placa"></p>
+		<p id="v2marca"></p>
+		<p id="v2modelo"></p>
+
+		<h1>Vehiculo 3</h1>
+		<p id="v3placa"></p>
+		<p id="v3marca"></p>
+		<p id="v3modelo"></p>
+
+	</body>
+	<script>
+		var vehiculo1 = {
+			placa:"THE999",
+			marca:"Chevrolet",
+			modelo:"cruze"
+		}
+
+		document.getElementById("v1placa").innerHTML = vehiculo1.placa;
+		document.getElementById("v1marca").innerHTML = vehiculo1.marca;
+		document.getElementById("v1modelo").innerHTML = vehiculo1.modelo;
+
+		var vehiculo2 = new Object();
+		vehiculo2.placa = "TEE222";
+		vehiculo2.marca = "ford";
+		vehiculo3.modelo = "amarok";
+
+		document.getElementById("v2placa").innerHTML = vehiculo2.placa;
+		document.getElementById("v2marca").innerHTML = vehiculo2.marca;
+		document.getElementById("v2modelo").innerHTML = vehiculo2.modelo;
+
+		function vehiculo3(placa,marca,modelo){
+			this.placa=placa;
+			this.marca=marca;
+			this.modelo=modelo;
+		}
+		vehiculo3 = new vehiculo3("lll000","fiat","fiorino");
+
+		document.getElementById("v3placa").innerHTML = vehiculo3.placa;
+		document.getElementById("v3marca").innerHTML = vehiculo3.marca;
+		document.getElementById("v3modelo").innerHTML = vehiculo3.modelo;
+
+	</script>
+</html>

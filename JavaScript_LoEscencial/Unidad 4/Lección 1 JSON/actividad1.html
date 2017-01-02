@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+
+	<script>
+
+		var estJSON = [{
+			"codigo":"001",
+			"nombre":"Clau"
+		},
+		{
+			"codigo":"002",
+			"nombre":"Pepe"
+		},
+		{
+			"codigo":"003",
+			"nombre":"Raul"
+		}];
+
+		function leerJSON(json){
+			
+			var i;
+			for(i=0;i<json.length;i++){
+				alert("codigo:"+json[i].codigo+"-"+"Nombre:"+json[i].nombre);
+			}
+	    
+		}
+
+		leerJSON(estJSON);
+
+
+	</script>
+</html>

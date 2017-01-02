@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="d1"></p>
+		<p id="d2"></p>
+		<p id="d3"></p>
+		<p id="d4"></p>
+		<p id="d5"></p>
+		<p id="d6"></p>
+
+	</body>
+	<script>
+		var d1 = new Date();
+		document.getElementById('d1').innerHTML = d1.getMonth();
+		
+		var d2 = new Date(2018, 9, 13);
+		document.getElementById('d2').innerHTML = d2.getMonth();
+		
+		var d3 = new Date(2008, 5, 23);
+		document.getElementById('d3').innerHTML = d3.getMonth();
+
+		var d4 = new Date(2003, 12, 25);
+		document.getElementById('d4').innerHTML = d4.getMonth();
+
+		var d5 = new Date(1999, 8, 18);
+		document.getElementById('d5').innerHTML = d5.getMonth();
+
+		var d6 = new Date(1991, 6, 16);
+		document.getElementById('d6').innerHTML = d6.getMonth();
+
+	</script>
+</html>

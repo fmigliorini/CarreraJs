@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Actividad 5 Objetos.</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		
+		<h1>Computadora 1</h1>
+		
+		<p id="c1codigo"></p>
+		<p id="c1ram"></p>
+		<p id="c1discoDuro"></p>
+
+		<h1>Computadora 2</h1>
+
+		<p id="c2codigo"></p>
+		<p id="c2ram"></p>
+		<p id="c2discoDuro"></p>
+
+		<h1>Computadora 3</h1>
+		
+		<p id="c3codigo"></p>
+		<p id="c3ram"></p>
+		<p id="c3discoDuro"></p>
+
+	</body>
+	<script>
+		var computadora1 = {
+			codigo:"001",
+			ram:"2gb",
+			discoDuro:"1Tera"
+		}
+
+		document.getElementById("c1codigo").innerHTML = computadora1.codigo;
+		document.getElementById("c1ram").innerHTML = computadora1.ram;
+		document.getElementById("c1discoDuro").innerHTML = computadora1.discoDuro;
+
+		var computadora2 = new Object();
+		computadora2.codigo = "002";
+		computadora2.ram = "8gb";
+		computadora2.discoDuro = "2Tera";
+
+		document.getElementById("c2codigo").innerHTML = computadora2.codigo;
+		document.getElementById("c2ram").innerHTML = computadora2.ram;
+		document.getElementById("c2discoDuro").innerHTML = computadora2.discoDuro;
+
+		function computadora3(codigo,ram,discoDuro){
+			this.codigo=codigo;
+			this.ram=ram;
+			this.discoDuro=discoDuro;
+		}
+		computadora3 = new computadora3("003","16GB","250SSD");
+
+		document.getElementById("c3codigo").innerHTML = computadora3.codigo;
+		document.getElementById("c3ram").innerHTML = computadora3.ram;
+		document.getElementById("c3discoDuro").innerHTML = computadora3.discoDuro;
+
+	</script>
+</html>

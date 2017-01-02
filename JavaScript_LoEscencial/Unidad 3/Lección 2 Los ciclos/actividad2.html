@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="text"></p>
+	</body>
+	<script>
+
+		text = "";
+		objeto = {id:'001',nombre:'nombrePrueba',telefono:'44444444'};
+		for(x in objeto){
+			text += objeto[x]+'<br>';
+		}
+		document.getElementById("text").innerHTML = text;
+	</script>
+</html>

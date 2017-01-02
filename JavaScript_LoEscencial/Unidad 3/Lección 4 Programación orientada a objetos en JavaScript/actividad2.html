@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="miFuncion()">button</button>
+		<p id="mostrar"></p>
+	</body>
+	<script>
+		function Estudiante(codigo,nombre,nota1,nota2){
+			this.codigo=codigo;
+			this.nombre=nombre;
+			this.nota1=nota1;
+			this.nota2=nota2;
+
+			this.promedio = function(){
+				document.getElementById("mostrar").innerHTML = (nota1+nota2)/2;
+			}
+		}
+
+		function miFuncion(){
+			var estudiante = new Estudiante("001","carlos",9,8);
+			estudiante.promedio();
+		}
+	</script>
+</html>

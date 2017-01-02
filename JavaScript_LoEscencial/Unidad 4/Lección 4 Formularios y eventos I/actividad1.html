@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body onload="welcome()">
+		<form onreset="restart()">
+		
+			<h1>Información Personal</h1>
+			
+			<p>Nombres <input onChange="textMayus(this)" type="text"></p>
+			<p>Apellidos: <input onChange="textMayus(this)" type="text"></p>
+			<p>Dirección: <input type="text"></p>
+			<p>Edad: <input type="text"></p>
+			<p>Fecha de Nacimiento: <input type="date"></p>
+			<p>Estado Civil: <input type="text"></p>
+			
+			<h2>Información Académica</h2>
+
+			<p>Universidad <input type="text"></p>
+			<p>Profesión <input type="text"></p>
+			<p>Observaciones <textarea onSelect="sel()"></textarea>
+
+			<button onclick="enviar()">Enviar</button>
+			<button type="reset">Restablecer</button>
+		</form>
+	</body>
+	<script>
+		function welcome(){
+			alert("Bienvenido a su formato de Hoja de Vida");
+		}
+		function enviar(){
+			alert("Su Hoja de Vida ha Sido Guardada Correctamente");
+		}
+		function sel(){
+			alert("Texto Seleccionado");
+		}
+		function textMayus(obj){
+			var input=obj;
+			obj.value=obj.value.toUpperCase();	
+		}
+		function restart(){
+			alert("Se ha restablecido el Texto");	
+		}
+		</script>
+</html>

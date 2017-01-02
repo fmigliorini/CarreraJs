@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="d1"></p>
+		<p id="d2"></p>
+		<p id="d3"></p>
+		<p id="d4"></p>
+		<p id="d5"></p>
+		<p id="d6"></p>
+
+	</body>
+	<script>
+		var d1 = new Date();
+		document.getElementById('d1').innerHTML = d1.getDate();
+		
+		var d2 = new Date(2020, 1, 26);
+		document.getElementById('d2').innerHTML = d2.getDate();
+		
+		var d3 = new Date(1995, 4, 11);
+		document.getElementById('d3').innerHTML = d3.getDate();
+
+		var d4 = new Date(2008, 10, 8);
+		document.getElementById('d4').innerHTML = d4.getDate();
+
+		var d5 = new Date(2004, 3, 14);
+		document.getElementById('d5').innerHTML = d5.getDate();
+
+		var d6 = new Date(1997, 9, 28);
+		document.getElementById('d6').innerHTML = d6.getDate();
+
+	</script>
+</html>

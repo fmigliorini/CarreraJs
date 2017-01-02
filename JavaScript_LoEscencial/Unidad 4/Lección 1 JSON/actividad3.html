@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="mostrarVenta();">Mostrar Ventas </button>
+		<button onclick="mostrarTotalVentas();">Mostrar Total Ventas</button>
+		<p id="ventas"></p>
+		<p id="totalVentas"></p>
+	</body>
+
+	<script>
+
+		//Crear un documento HTML que contenga un script donde se defina un  JSON llamado ventas y tenga 10 objetos con las propiedades código de tipo cadena de texto y valor de tipo numérico. La idea es crear dos botones; el primero con el texto “Mostrar Ventas”, cuya acción será recorrer el JSON y mostrar los objetos con sus respectivas propiedades; el segundo botón con texto “Mostrar Total Ventas”, cuya acción será mostrar la sumatoria total de las propiedades valor de los objetos ventas.
+
+
+		var ventas = [
+			{"codigo":"001","valor":12},
+			{"codigo":"002","valor":23},
+			{"codigo":"003","valor":44},
+			{"codigo":"004","valor":32},
+			{"codigo":"005","valor":15},
+			{"codigo":"006","valor":5},
+			{"codigo":"007","valor":14},
+			{"codigo":"008","valor":61},
+			{"codigo":"009","valor":12},
+			{"codigo":"010","valor":23}
+		];
+
+		function leerVentasJSON(json){
+			var out = "";
+			var i;
+			for(i=0;i<json.length;i++){
+				out+= "producto -> Codigo: "+json[i].codigo+"-"+"valor:"+json[i].valor+"<br>";
+			}
+			document.getElementById("ventas").innerHTML = out;
+		}
+
+		function leerTotalVentasJSON(json){
+			var out = 0;
+			var i;
+			for(i=0;i<json.length;i++){
+				out+=json[i].valor;
+			}
+			document.getElementById("totalVentas").innerHTML = "Total Ventas : " + out;
+		}
+
+		function mostrarVenta(){
+			leerVentasJSON(ventas);
+		}
+
+		function mostrarTotalVentas(){
+			leerTotalVentasJSON(ventas);
+		}
+
+	</script>
+</html>
