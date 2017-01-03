@@ -1,9 +1,10 @@
 'use strcit';
 
 var carApp = angular.module('carApp', [
+	'ngRoute',
+	'carAppAnimations',
 	'carAppControllers',
-	'carAppServices',
-	'ngRoute'
+	'carAppServices'
 	]);
 
 carApp.config(['$routeProvider',
@@ -19,5 +20,5 @@ carApp.config(['$routeProvider',
 			}).
 			otherwise({
 				redirectTo: '/cars'
-			})	
+			})
 	}]);
